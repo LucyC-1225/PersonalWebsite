@@ -1,0 +1,371 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+body {
+  background-color: #282c34;
+}
+
+h1, h2, p{
+  color: white;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #9D00FF ;
+}
+h2 {
+  color: #9D00FF;
+  /*color: #816797;*/
+  font-size: 4em;
+}
+section {
+  padding: 5rem;
+}
+/*Nav Bar*/
+/*ul{
+  list-style-type: none;
+  background-color: black;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 0rem;
+  text-align: center;
+}
+li{
+  display: inline;
+}
+li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  padding: 1em;
+}
+li a:hover{
+  background-color: #9D00FF;
+  transition: 1s;
+}*/
+:root {
+  --primColor: #dcdcdc;
+  --secoColor: #555555;
+  --cornerRad: 4px;
+}
+
+details {
+  margin: 40px;
+}
+summary {
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px 10px;
+  width: 23px;
+  height: 17px;
+  background-color: var(--primColor);
+  border: 2px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  color: var(--secoColor);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+  position: static;
+  top: 0;
+  left: 0;
+}
+summary::before {
+  content: "";
+}
+summary::after {
+  content: "III";
+  letter-spacing: -1px;
+}
+summary:hover {
+  transform: scale(1.1);
+}
+summary::marker {
+  font-size: 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .menu {
+  animation-name: menuAnim;
+}
+details[open] summary::before {
+  content: "X";
+}
+details[open] summary::after {
+  content: "";
+}
+
+.menu {
+  position: absolute;
+  height: 0;
+  width: fit-content;
+  border-radius: var(--cornerRad);
+  background-color: var(--primColor);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: closeMenu 300ms ease-in-out forwards;
+}
+.menu a {
+  padding: 12px 24px;
+  margin: 0 16px;
+  color: var(--secoColor);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+  transition: filter 200ms linear 0s;
+}
+.menu a:nth-of-type(1) {
+  padding-top: 24px;
+}
+.menu a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.menu a:hover {
+  filter: brightness(200%);
+}
+details::before {
+  color: var(--secoColor);
+  position: absolute;
+  margin-left: 80px;
+  padding: 10px 10px;
+  opacity: 0.4;
+}
+details[open]::before {
+  animation: fadeMe 300ms linear forwards;
+}
+@keyframes menuAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 312px;
+  }
+}
+@keyframes fadeMe {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*intro*/
+#introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first-half {
+  flex: 1;
+}
+
+#second-half {
+  flex: 1;
+}
+
+#computer {
+  width: 27rem;
+  height: auto;
+}
+#second-half p {
+  font-size: 2rem;
+}
+
+/*Experiences*/
+/*.column {
+  float: left;
+  width: 30%;
+  height: 15rem;
+  margin: 0.8rem;
+  background-color: gray;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column p {
+  margin: 1rem;
+  font-size: 1.5rem;
+}*/
+#experiences {
+  background-color: #282f30;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.column {
+  background-color: #404754;
+  flex: 15rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  height: 15rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+.box-shadow{
+  box-shadow: -19px 10px 42px -8px rgba(0,0,0,0.75);
+}
+/*flexbox within a flexbox, vertically and horizontally align text*/
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+/*languages*/
+.column:hover {
+  transition: all 0.5s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #cccccc;
+  background-color: #9D00FF;
+}
+article a {
+  text-decoration: none;
+}
+
+article a p:hover {
+  font-weight: bold;
+  font-size: 2.1rem;
+}
+
+.languages-text {
+  position: relative;
+  font-size: 2rem;
+  /*padding: 4rem;*/
+}
+
+#html, #java {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#html::before {    
+  content: "";
+  background-image: url("https://drive.google.com/uc?id=1Rl63hsNtYHuiMzmrk9XLLm9OawYxFHKB");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+  background-repeat: no-repeat;
+  padding-bottom: -1rem;
+}
+#java::before {    
+  content: "";
+  background-image: url("https://drive.google.com/uc?id=1b3ZoF4BavVcBrzRAqKY1viQaxDgXUmgD");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: auto;
+  padding-left: 5rem;
+  padding-bottom: -3rem;
+}
+/*Certifications*/
+#section-certification {
+  background-color: #282f30;
+}
+#certifications {
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  border-width: 1rem;
+  padding: 1rem;
+  border-color: white;
+}
+#half-1 {
+  flex: 1;
+}
+#half-2 {
+  flex: 1;
+}
+#half-2 h3 {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0px;
+}
+#half-2 p {
+  font-size: 1.5rem;
+}
+.button{
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  border-color: #9D00FF;
+  border-width: 0.5rem;
+  background-color: #282c34;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button:hover{
+  color: white;
+  border-color: white;
+  background-color: #9D00FF;
+  transition: 1.5s;
+  font-weight: bold;
+}
+
+/*Hr*/
+hr{
+  border: 0;
+  height: 0.2rem;
+  width: 10%;
+  position: relative;
+  margin: 0px auto;
+  background-color: #9D00FF;
+}
+/*footer icon*/
+.fa {
+  padding: 1rem;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 3rem;
+}
+
+
+footer {
+  padding: 4rem;
+  background: black;
+  text-align: center;
+}
